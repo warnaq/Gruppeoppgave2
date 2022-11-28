@@ -1,0 +1,32 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+    <title>UFO observasjon register</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/2.3.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="js/loggInn.js"></script>
+    <script src="js/validering.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Logg inn</h1>
+        <form class="form">
+            <div class="form-group">
+                <label>Brukernavn</label>
+                <input type="text" id="brukernavn" onchange="validerBrukernavn(this.value)" />
+                <span id="feilBrukernavn" style="color: red"></span>
+            </div>
+            <div class="form-group">
+                <label>Passord</label>
+                <input type="password" id="passord" onchange="validerPassord(this.value)" />
+                <span id="feilPassord" style="color: red"></span>
+            </div>
+            <div class="form-group">
+                <input type="button" value="Logg inn" onClick="loggInn()" class="btn btn-primary" />
+            </div>
+            <div id="feil" style="color: red"></div>
+        </form>
+    </div>
+</body>
+</html>

@@ -1,0 +1,63 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+    <title>UFO observasjon register</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/2.3.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="js/lagre.js"></script>
+    <script src="js/validering.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Lagre observasjon</h1>
+        <form class="form">
+            <div class="form-group">
+                <label>Fornavn</label>
+                <input type="text" id="fornavn" onchange="validerFornavn(this.value)" />
+                <span id="feilFornavn" style="color: red"></span>
+            </div>
+            <div class="form-group">
+                <label>Etternavn</label>
+                <input type="text" id="etternavn" onchange="validerEtternavn(this.value)" />
+                <span id="feilEtternavn" style="color: red"></span>
+            </div>
+            <div class="form-group">
+                <label>Adresse</label>
+                <input type="text" id="adresse" onchange="validerAdresse(this.value)" />
+                <span id="feilAdresse" style="color: red"></span>
+            </div>
+
+            <div class="form-group">
+                <label>Postnr</label>
+                <input type="text" id="postnr" onchange="validerPostnr(this.value)" />
+                <span id="feilPostnr" style="color: red"></span>
+            </div>
+
+            <div class="form-group">
+                <label>Poststed</label>
+                <input type="text" id="poststed" onchange="validerPoststed(this.value)" />
+                <span id="feilPoststed" style="color: red"></span>
+            </div>
+
+            <div class="form-group">
+                <label>Når</label>
+                <input type="text" id="når" onchange="validerNår(this.value)" />
+                <span id="feilNår" style="color: red"></span>
+            </div>
+
+            <div class="form-group">
+                <label>Beskrivelse</label>
+                <input type="text" id="beskrivelse" onchange="validerBeskrivelse(this.value)" />
+                <span id="feilBeskrivelse" style="color: red"></span>
+            </div>
+
+            <div class="form-group">
+                <input type="button" id="reg" value="Registrer" onClick="validerOgLagreobservasjon()" class="btn btn-primary" />
+            </div>
+            <div id="feil" style="color: red"></div>
+
+        </form>
+    </div>
+</body>
+</html>
